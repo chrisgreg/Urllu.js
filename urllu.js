@@ -42,7 +42,7 @@ $(document).ready(function(){
 	$(".ssearch").click(function(){
 		searchQuery = $(".ssquery").val();
 		$.grep(array, function(obj) {
-			if (obj.Keyword == searchQuery){
+			if (obj.Keyword.toLowerCase() == searchQuery.toLowerCase()){
 				window.location.href = obj.URL;
 			} 
 		});
